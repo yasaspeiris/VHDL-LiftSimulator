@@ -1,0 +1,15 @@
+
+State Machine - |liftsim|floor_state
+Name floor_state.floor1d floor_state.floor2d floor_state.floor3d floor_state.floor4d floor_state.floor5d floor_state.floor6 floor_state.floor5a floor_state.floor4a floor_state.floor3a floor_state.floor2a floor_state.floor1a floor_state.floorg 
+floor_state.floorg 0 0 0 0 0 0 0 0 0 0 0 0 
+floor_state.floor1a 0 0 0 0 0 0 0 0 0 0 1 1 
+floor_state.floor2a 0 0 0 0 0 0 0 0 0 1 0 1 
+floor_state.floor3a 0 0 0 0 0 0 0 0 1 0 0 1 
+floor_state.floor4a 0 0 0 0 0 0 0 1 0 0 0 1 
+floor_state.floor5a 0 0 0 0 0 0 1 0 0 0 0 1 
+floor_state.floor6 0 0 0 0 0 1 0 0 0 0 0 1 
+floor_state.floor5d 0 0 0 0 1 0 0 0 0 0 0 1 
+floor_state.floor4d 0 0 0 1 0 0 0 0 0 0 0 1 
+floor_state.floor3d 0 0 1 0 0 0 0 0 0 0 0 1 
+floor_state.floor2d 0 1 0 0 0 0 0 0 0 0 0 1 
+floor_state.floor1d 1 0 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,53 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity liftsim is
+	port(a,b,clk : in std_logic;
+		  c,d : out std_logic);
+end entity coffee_cup;
+
+architecture test of coffee_cup is
+	constant initial : std_logic_vector(2 downto 0) := "001";
+	constant change : std_logic_vector(2 downto 0) := "010";
+	constant dispense : std_logic_vector(2 downto 0) := "100";
+	signal state : std_logic_vector(2 downto 0) := "001";
+	signal i : integer := 0;
+	
+	begin
+		process (clk)
+		begin
+			if rising_edge(clk) then
+				case state is
+					
+					when initial =>
+						if (a='1') then
+							state <= dispense;
+						elsif (b='1') then
+							state <= change;
+						else
+							state <= initial;
+						end if;
+						
+					when change =>
+						if (b='1') then
+							c <= '1';
+							state <= dispense;							
+						else
+							state <= initial;
+						end if;
+						
+					when dispense =>
+						if (a = '1' or b = '1') then
+							d <= '1';						
+						else
+							state <= initial;
+						end if;	
+					
+					when others =>
+						null;
+						
+				end case;
+			end if;
+		end process;
+	end architecture test;
+						
